@@ -6,7 +6,7 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.formatting.prettier.with({
-            extra_args = { "--single-quote", "--tab-width", "2", "--semi", "false" },
+            extra_args = { "--tab-width", "2", "--semi", "true" },
           }),
         },
       })
