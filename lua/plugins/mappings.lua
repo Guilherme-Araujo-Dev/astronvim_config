@@ -1,15 +1,17 @@
 return {
-	-- Configuração para o AstroNvim e plugins
-	{
-		"github/copilot.vim",
-		config = function()
-			-- Defina o mapeamento personalizado para aceitar sugestões do Copilot
-			vim.keymap.set("i", "<C-]>", 'copilot#Accept("<CR>")', {
-				expr = true,
-				replace_keycodes = true,
-			})
-			-- Desabilitar mapeamento padrão do Tab
-			vim.g.copilot_no_tab_map = false
-		end,
-	},
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = {
+      mappings = {
+        n = {
+          ["<Leader>xt"] = { "<cmd>TSImportAll<cr>", desc = "Execute TSImportAll" },
+        },
+      },
+    },
+    vim.api.nvim_create_user_command("TSImportAll", function()
+      local params = { context = { only = { "source.addMissingImports" } } }
+      vim.lsp.buf.code_action(params)
+    end, { desc = "Importa todos os módulos faltantes" }),
+  },
 }

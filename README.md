@@ -21,7 +21,10 @@ mv astonvim_config nvim
 
 ```bash
 nvim
-:PlugInstall
 ```
+
+Se não instalar os plugins execute o seguinte comando:
+
+`:PlugInstall`
 
 4 - Pronto, agora você tem o AstroVim personalizado por mim.
