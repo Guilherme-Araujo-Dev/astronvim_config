@@ -76,6 +76,18 @@ return {
 
 				-- setting a mapping to false will disable it
 				-- ["<C-S>"] = false,
+				--
+
+				-- AutoImporter TS
+				["<Leader>xi"] = {
+					"<cmd>VtsExec add_missing_imports<cr>",
+					desc = "TS: Auto Importar Tudo (Vtsls)",
+				},
+			},
+			i = {
+				-- <Esc> sai do modo insert
+				-- :w<CR> salva o arquivo (write + enter)
+				["<C-s>"] = { "<Esc>:w<CR>", desc = "Salvar e ir para o Modo Normal" },
 			},
 		},
 	},

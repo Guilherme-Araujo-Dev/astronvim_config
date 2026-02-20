@@ -13,5 +13,6 @@ return {
 	{ import = "astrocommunity.pack.java" },
 	{ import = "astrocommunity.pack.rust" },
 	{ import = "astrocommunity.pack.typescript" },
+	-- { import = "astrocommunity.recipes.ai" },
 	-- import/override with your plugins folder
 }

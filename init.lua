@@ -20,6 +20,6 @@ end
 
 require("lazy_setup")
 require("polish")
-require("codesnap").setup({
-	bg_padding = 0,
-})
+-- require("codesnap").setup({
+-- 	bg_padding = 0,
+-- })
