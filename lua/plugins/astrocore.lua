@@ -85,9 +85,12 @@ return {
 				},
 			},
 			i = {
-				-- <Esc> sai do modo insert
-				-- :w<CR> salva o arquivo (write + enter)
 				["<C-s>"] = { "<Esc>:w<CR>", desc = "Salvar e ir para o Modo Normal" },
+			},
+			v = {
+				["'"] = { "<esc>`>a'<esc>`<i'<esc>", desc = "Envolver seleção com aspas simples" },
+
+				['"'] = { '<esc>`>a"<esc>`<i"<esc>', desc = "Envolver seleção com aspas duplas" },
 			},
 		},
 	},
