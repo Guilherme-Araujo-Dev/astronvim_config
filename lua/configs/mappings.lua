@@ -1,4 +1,9 @@
-vim.api.nvim_create_user_command("TSImportAll", function()
-  local params = { context = { only = { "source.addMissingImports" } } }
-  vim.lsp.buf.code_action(params)
-end, { desc = "Importa todos os módulos faltantes" })
+local map = require("astrocore").set_mappings
+
+return map({
+	-- Normal mode
+	n = {
+		["<Leader>xt"] = { "<cmd>TSImportAll<CR>", desc = "Execute TSImportAll" },
+		-- adicione outros mapeamentos aqui...
+	},
+})
